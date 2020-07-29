@@ -12,7 +12,7 @@ let whazzupurl = 'http://api.ivao.aero/getdata/whazzup/whazzup.txt'
 // ----- FILE IMPORTS -----
 
 // ----- WEB SERVER | SETUP -----
-const requestListener = function (req, res) {
-    res.writeHead(200);
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
     res.end('<h1>Tested!</h1>');
-}
+  }).listen(8080);
