@@ -12,7 +12,19 @@ let whazzupurl = 'http://api.ivao.aero/getdata/whazzup/whazzup.txt'
 // ----- FILE IMPORTS -----
 
 // ----- WEB SERVER | SETUP -----
-http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('<h1>Tested!</h1>');
-  }).listen(8080);
+let handleRequest = (request, response) => {
+    response.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    fs.readFile('./index.html', null, function (error, data) {
+        if (error) {
+            response.writeHead(404);
+            respone.write(':O, We couldn\'t find the requested file. (Code: 404_NOT_FOUND)');
+        } else {
+            response.write(data);
+        }
+        response.end();
+    });
+};
+ 
+http.createServer(handleRequest).listen(80);
