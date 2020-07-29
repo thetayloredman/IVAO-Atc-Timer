@@ -1,0 +1,13 @@
+.center {
+    text-align: center;
+}
+.blackborder {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.pad {
+    padding: 15px;
+}
+.borderspace {
+    border-spacing: 5px;
+}
