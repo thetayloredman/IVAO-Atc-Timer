@@ -59,7 +59,7 @@ function loadFile(filePath) {
     if (xmlhttp.status==200) {
       result = xmlhttp.responseText;
     }
-    return result;
+    result = xmlhttp.responseText;
   }
 loadFile('whazzup.txt')
 console.log('Fetched Whazzup data.')
