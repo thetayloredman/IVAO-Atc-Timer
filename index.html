@@ -51,6 +51,7 @@
             console.log('----- IVAO XA CONTROLLER TRACKER -----');
 console.log('Loaded!')
 console.log('Checking for latest Whazzup data...')
+var result = null;
 function loadFile(filePath) {
     var result = null;
     var xmlhttp = new XMLHttpRequest();
@@ -60,10 +61,10 @@ function loadFile(filePath) {
       result = xmlhttp.responseText;
     }
     result = xmlhttp.responseText;
-  }
-  if (result == undefined) {
-      let result = "HTTP_ERROR"
-  }
+}
+if (result == undefined) {
+  let result = "HTTP_ERROR"
+}
 loadFile('whazzup.txt')
 console.log('Fetched Whazzup data.')
 console.log('Processing Whazzup...')
