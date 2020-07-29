@@ -11,7 +11,7 @@ function loadFile(filePath) {
     }
     return result;
   }
-loadFile(whazzup.txt)
+loadFile('whazzup.txt')
 console.log('Fetched Whazzup data.')
 console.log('Processing Whazzup...')
 let unpruned = result.split('!GENERAL')[0]
@@ -27,4 +27,4 @@ let airports = airportsup.split('!SERVERS')[0]
 let servers = serversup
 console.log('Data pruned.')
 console.log('[DEBUG] Printing data!')
-console.log( { result, unpruned, generalup, clientsup, airportsup, serversup, general, clients, airports, servers } )
+console.log({ result, unpruned, generalup, clientsup, airportsup, serversup, general, clients, airports, servers })
