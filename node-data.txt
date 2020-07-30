@@ -1,2 +1,2 @@
 Node.JS Variables used for transfer
-whazzupurl = NaN
+whazzupurl = http://api.ivao.aero/getdata/whazzup/whazzup.txt

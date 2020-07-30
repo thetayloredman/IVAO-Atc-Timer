@@ -34,7 +34,7 @@ let handleRequest = (request, response) => {
     });
 };
 console.log('Request handler ready.')
-let nodedata = 'Node.JS Variables used for transfer\nwhazzupurl = ' + + whazzupurl
+let nodedata = 'Node.JS Variables used for transfer\nwhazzupurl = ' + whazzupurl
 fs.writeFile('node-data.txt', nodedata, function (err) {
     if (err) { console.log('Error writing to node-data.txt.'); throw err; }
 })
