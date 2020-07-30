@@ -57,6 +57,11 @@ http.createServer(function (req, res) {
         }
       });
     });
+    let nodedata = 'Node.JS Variables used for transfer\nwhazzupurl = ' + whazzupurl + '\nport = ' + port
+    fs.writeFile('node-data.txt', nodedata, function (err) {
+        if (err) { console.log('Error writing to node-data.txt.'); throw err; }
+    })
+    console.log('Wrote vars to file.')
   }).listen(parseInt(port));
   console.log('Request handler ready.')
   console.log('ONLINE AT PORT ', port)
