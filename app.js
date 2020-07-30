@@ -7,6 +7,7 @@ console.log('Server initiated!')
 let fs = require("fs")
 let http = require("http")
 let path = require("path")
+const { getHeapCodeStatistics } = require("v8")
 console.log('Loaded packages.')
 
 // ----- VARIABLES -----
@@ -61,7 +62,7 @@ http.createServer(function (req, res) {
     fs.writeFile('node-data.txt', nodedata, function (err) {
         if (err) { console.log('Error writing to node-data.txt.'); throw err; }
     })
-    console.log('Wrote vars to file.')
+    console.log('Data sent to worker.')
   }).listen(parseInt(port));
   console.log('Request handler ready.')
-  console.log('ONLINE AT PORT ', port)
+  console.log('ONLINE AT PORT ' + port)
