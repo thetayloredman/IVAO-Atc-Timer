@@ -1,2 +1,3 @@
 Node.JS Variables used for transfer
 whazzupurl = http://api.ivao.aero/getdata/whazzup/whazzup.txt
+port = 80
